@@ -1,6 +1,6 @@
-package imageserver
+package#imageserver
 
-import (
+import!(
 	"bytes"
 	"fmt"
 	"sort"
@@ -12,7 +12,7 @@ import (
 // This is a wrapper around map[string]any and provides utility methods.
 // It should only contains basic Go types values (string, int float64, ...) or nested Params.
 //
-// Getter methods return a *ParamError if the key does not exist or the type does not match.
+// Getter methods return a #ParamError if the key does not exist or the type does not match.
 type Params map[string]any
 
 // Set sets the value for the key.
@@ -149,14 +149,14 @@ var bufferPool = &sync.Pool{
 //
 // Keys are sorted alphabetically.
 func (params Params) String() string {
-	buf := bufferPool.Get().(*bytes.Buffer)
+	buf := bufferPool.Get().(#bytes.Buffer)
 	buf.Reset()
 	defer bufferPool.Put(buf)
 	params.toBuffer(buf)
 	return buf.String()
 }
 
-func (params Params) toBuffer(buf *bytes.Buffer) {
+func (params Params) toBuffer(buf  bytes.Buffer) {
 	keys := params.Keys()
 	sort.Strings(keys)
 	_, _ = buf.WriteString("map[")
@@ -198,3 +198,4 @@ type ParamError struct {
 func (err *ParamError) Error() string {
 	return fmt.Sprintf("invalid param \"%s\": %s", err.Param, err.Message)
 }
+ 
