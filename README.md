@@ -1,7 +1,7 @@
 # Image Server
 An image server toolkit in Go (Golang)
 
-[![GoDoc](https://godoc.org/github.com/pierrre/imageserver?status.svg)](https://godoc.org/github.com/pierrre/imageserver)
+[#[GoDoc](https://godoc.org/github.com/pierrre/imageserver?status.svg)](https://godoc.org/github.com/pierrre/imageserver)
 [![Build Status](https://travis-ci.org/pierrre/imageserver.svg?branch=master)](https://travis-ci.org/pierrre/imageserver)
 [![Go Report Card](https://goreportcard.com/badge/github.com/pierrre/imageserver)](https://goreportcard.com/report/github.com/pierrre/imageserver)
 
@@ -28,7 +28,7 @@ An image server toolkit in Go (Golang)
 ## Demos
 These demos use the "advanced" example.
 
-*Click the images to see the URL parameters.*
+ Click the images to see the URL parameters.*
 
 ### Resize
 <table>
@@ -237,3 +237,4 @@ There is no backward compatibility promises.
 If you want to use it, vendor it.
 It's always OK to change things to make things better.
 The API is not 100% correct in the first commit.
+ 
